@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Warsztaty z JSa!</title>
+  </head>
+  <body>
+    <button id="przycisk">Kliknij na mnie</button>
+    <pre id="okno"></pre>
+  </body>
+  <script>
+    function zrobCos() {
+      document.getElementById("okno").innerText = "Naciśnięto przycisk!";
+    }
+    document.getElementById("przycisk").onclick = zrobCos;
+  </script>
+</html>
