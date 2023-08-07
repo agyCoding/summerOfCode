@@ -5,13 +5,28 @@
     <title>Warsztaty z JSa!</title>
   </head>
   <body>
-    <button id="przycisk">Kliknij na mnie</button>
+    <button id="przyciskPrzyjdz">Przyjdź</button>
+    <button id="przyciskOdejdz">Odejdź</button>
+    <button id="przyciskPowiedzCos">Powiedz coś</button>
     <pre id="okno"></pre>
   </body>
   <script>
-    function zrobCos() {
-      document.getElementById("okno").innerText = "Naciśnięto przycisk!";
+    let wiadomosc = "Nie wiem, gdzie jesteś!";
+
+    function przyjdz() {
+      wiadomosc = "Witaj!";
     }
-    document.getElementById("przycisk").onclick = zrobCos;
+
+    function odejdz() {
+      wiadomosc = "Szerokiej drogi!";
+    }
+
+    function powiedzCos() {
+      document.getElementById("okno").innerText = wiadomosc;
+    }
+
+    document.getElementById("przyciskPowiedzCos").onclick = powiedzCos;
+    document.getElementById("przyciskPrzyjdz").onclick = przyjdz;
+    document.getElementById("przyciskOdejdz").onclick = odejdz;
   </script>
 </html>
